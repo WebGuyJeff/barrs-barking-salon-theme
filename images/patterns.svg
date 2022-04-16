@@ -1,0 +1,12 @@
+<svg display="block" height="0" width="0">
+  <defs>
+    <radialGradient id="pattern_insta" cx="73" cy="118.1" r="64" fx="73" fy="118" gradientTransform="matrix(1.8 1.3 -1.6 2.2 74.4 -224.8)" gradientUnits="userSpaceOnUse" xlink:href="#linear"></radialGradient>
+    <linearGradient id="linear" x1="0%" x2="100%" y1="0%" y2="0%" gradientTransform="rotate(45)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#feda75"></stop>
+      <stop offset=".2" stop-color="#fa7e1e"></stop>
+      <stop offset=".6" stop-color="#d62976"></stop>
+      <stop offset=".8" stop-color="#962fbf"></stop>
+      <stop offset="1" stop-color="#4f5bd5"></stop>
+    </linearGradient>
+  </defs>
+</svg>
