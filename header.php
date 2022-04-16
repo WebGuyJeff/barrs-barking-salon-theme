@@ -11,6 +11,12 @@
 
 // Load theme settings variables for this document
 $bbs_settings = get_option( 'bbs_theme_array' ); // Serialized array of all Options
+if ( $bbs_settings === false ) {
+	$bbs_settings = [
+		"bbs_email_address" => "example@email-address.com",
+		"bbs_phone_number" => "0800 000 000"
+	];
+}
 $bbs_email_address = $bbs_settings['bbs_email_address']; // Email Address
 $bbs_phone_number = $bbs_settings['bbs_phone_number']; // Phone Number
 $bbs_phone_href = preg_replace('/\s+/', '', $bbs_phone_number); // Whitespace cleaned for url

@@ -20,7 +20,6 @@ add_action( 'admin_menu', function() {
    }
 });
 
-
 class BarrsBarkingSalonThemeSettings {
 	private $bbs_theme;
 

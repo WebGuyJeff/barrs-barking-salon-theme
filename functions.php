@@ -7,18 +7,16 @@
  * @package Barrs_Barking_Salon
  */
 
-
 /**
- * Dependcency Plugin Check
+ * Dependcency Check
  * 
- * Not installing these plugins makes WordPress a dull boy.
+ * All theme and no dependencies makes WordPress a dull WSOD.
+ * 
+ * If the dependency check fails, switch back to the previous theme $oldtheme which is passed by
+ * after_switch_theme.
  * 
  */
-function plugin_dependency_check() {
-
-	if (!function_exists('is_plugin_active')) {
-		include_once(ABSPATH . 'wp-admin/includes/plugin.php');
-	}
+function dependency_check() {
 
 	$plugin_dependencies = [
 		"Advanced Custom Fields" 	=> 'advanced-custom-fields/acf.php',
@@ -26,6 +24,10 @@ function plugin_dependency_check() {
 		"SVG Support"				=> 'svg-support/svg-support.php',
 		"WPForms"					=> 'wpforms-lite/wpforms.php',
 	];
+
+	if (!function_exists('is_plugin_active')) {
+		include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+	}
 
 	$missing_plugins = [];
 	$active_plugins = get_option( 'active_plugins' );
@@ -42,9 +44,17 @@ function plugin_dependency_check() {
 		$plugin_list   		= "<ul>{$plugin_string}</ul>\n";
 		$title 				= "Missing Theme Dependencies";
 		$message 			= "<h1>{$title}</h1>\n";
-		$message 		   .= "<p>The following plugins must be installed and activated to use this theme:</p>";
+		$message 		   .= "<p>The following plugins must be installed and activated to use this theme:</p>\n";
 		$message 		   .= $plugin_list;
-		$message 		   .=  "<p>Please visit the plugin page to install these plugins.</p>";
+		$message 		   .=  "<p>Please visit the plugin page to install these plugins.</p>\n";
+
+		// If this is not a preview and the theme has been activated, fallback to default theme.
+		global $wp_customize;
+		if ( ! isset( $wp_customize ) ) {
+			switch_theme( WP_DEFAULT_THEME );
+			$warning_styles = 'style="color:#fff;font-weight:800;background:red;padding:0 5px;width:fit-content;"';
+			$message .=  "<p {$warning_styles}>The default theme has been activated to prevent errors.</p>\n";
+		}
 
 		wp_die(
 			$message,
@@ -56,7 +66,8 @@ function plugin_dependency_check() {
 		);
 	}
 }
-plugin_dependency_check();
+dependency_check();
+
 
 
  // Barking Salon admin settings

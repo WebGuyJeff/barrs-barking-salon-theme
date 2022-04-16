@@ -41,7 +41,7 @@ function bbs_register_post_type_service() {
            'menu_position' => 6,
            'menu_icon' => 'dashicons-screenoptions',
            'hierarchical' => false,
-           'taxonomies' => 'category',
+           'taxonomies' => ['category'],
            'show_in_rest' => false,
            'delete_with_user' => false
        )

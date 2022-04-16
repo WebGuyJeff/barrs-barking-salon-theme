@@ -70,24 +70,8 @@ $bbs_url_cityguilds = $bbs_settings['bbs_url_cityguilds']; // City and Guilds UR
 
 <!-- svg fill patterns -->
 <?php echo file_get_contents( get_template_directory() . "/images/patterns.svg");?>
+
 <?php wp_footer(); ?>
 
-
-<!-- Dev Info --
-<?php
-echo "# All Post Types\n";
-$post_types = get_post_types();
-foreach($post_types as $value) {
-    echo $value . "\n";
-}
-
-global $wp_query;
-$current_post_type = get_post_type();
-if (isset( $current_post_type )) {
-echo "# Current Post Type\n" . $current_post_type;
-}
-?>
-
--- Dev Info End -->
 </body>
 </html>
