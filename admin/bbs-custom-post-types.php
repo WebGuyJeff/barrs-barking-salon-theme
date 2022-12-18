@@ -85,6 +85,7 @@ function bbs_register_post_type_review() {
            'menu_position' => 7,
            'menu_icon' => 'dashicons-thumbs-up',
            'hierarchical' => false,
+		   'taxonomies' => [''], // Had PHP error without this (Invalid argument supplied for foreach()).
            'show_in_rest' => false,
            'delete_with_user' => false
        )
