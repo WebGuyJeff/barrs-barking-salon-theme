@@ -1,6 +1,6 @@
 <?php
 // The Contact Form Template Part for Barr's Barking salon
-// 2021 © Barr's Barking Salon
+// 2023 © Barr's Barking Salon
 // Author: Jefferson Real
 // URL: https://jeffersonreal.uk
 ?>

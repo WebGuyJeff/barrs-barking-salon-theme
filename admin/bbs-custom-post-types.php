@@ -10,86 +10,86 @@ License: GPLv2
 
 // Add custom post type - Service
 function bbs_register_post_type_service() {
-   register_post_type( 'service',
-       array(
-           // Define semantic menu labels for the new post type
-           'labels' => array(
-               'name' => 'Salon Services',
-               'singular_name' => 'Service',
-               'add_new' => 'New Service',
-               'add_new_item' => 'Add New Service',
-               'edit_item' => 'Edit Service',
-               'new_item' => 'New Service',
-               'view_item' => 'View Services',
-               'search_items' => 'Search Services',
-               'not_found' => 'No Services Found',
-               'not_found_in_trash' => 'No Services found in Trash',
-           ),
-           // WP features the post type supports
-           'supports' => array(
-               'title',
-               'editor',
-           ),
-           'rewrite' => array(
-               'slug' => 'services', // URI to rewrite from the 'ugly' post type
-               'with_front' => 'false' // Don't prepend URI with default 'posts'
-           ),
-           'description' => 'Here are our current services and prices.',
-           'has_archive' => true,
-           'public' => true,
-           'show_in_menu' => true,
-           'menu_position' => 6,
-           'menu_icon' => 'dashicons-screenoptions',
-           'hierarchical' => false,
-           'taxonomies' => ['category'],
-           'show_in_rest' => false,
-           'delete_with_user' => false
-       )
-   );
-   register_taxonomy_for_object_type( 'category', 'service' );
+	register_post_type( 'service',
+		array(
+			// Define semantic menu labels for the new post type
+			'labels' => array(
+				'name' => 'Salon Services',
+				'singular_name' => 'Service',
+				'add_new' => 'New Service',
+				'add_new_item' => 'Add New Service',
+				'edit_item' => 'Edit Service',
+				'new_item' => 'New Service',
+				'view_item' => 'View Services',
+				'search_items' => 'Search Services',
+				'not_found' => 'No Services Found',
+				'not_found_in_trash' => 'No Services found in Trash',
+			),
+			// WP features the post type supports
+			'supports' => array(
+				'title',
+				'editor',
+			),
+			'rewrite' => array(
+				'slug' => 'services', // URI to rewrite from the 'ugly' post type
+				'with_front' => 'false' // Don't prepend URI with default 'posts'
+			),
+			'description' => 'Here are our current services and prices.',
+			'has_archive' => true,
+			'public' => true,
+			'show_in_menu' => true,
+			'menu_position' => 6,
+			'menu_icon' => 'dashicons-screenoptions',
+			'hierarchical' => false,
+			'taxonomies' => ['category'],
+			'show_in_rest' => false,
+			'delete_with_user' => false
+		)
+	);
+	register_taxonomy_for_object_type( 'category', 'service' );
 }
 add_action( 'init', 'bbs_register_post_type_service' );
 
 
 // Add custom post type - Review
 function bbs_register_post_type_review() {
-   register_post_type( 'review',
-       array(
-           // Define semantic menu labels for the new post type
-           'labels' => array(
-               'name' => 'Salon Reviews',
-               'singular_name' => 'Review',
-               'add_new' => 'New Review',
-               'add_new_item' => 'Add New Review',
-               'edit_item' => 'Edit Review',
-               'new_item' => 'New Review',
-               'view_item' => 'View Reviews',
-               'search_items' => 'Search Reviews',
-               'not_found' => 'No Reviews Found',
-               'not_found_in_trash' => 'No Reviews found in Trash',
-           ),
-           // WP features the post type supports
-           'supports' => array(
-               'title',
-               'editor',
-           ),
-           'rewrite' => array(
-               'slug' => 'reviews', // URI to rewrite from the 'ugly' post type
-               'with_front' => 'false' // Don't prepend URI with default 'posts'
-           ),
-           'description' => 'This is a custom post type for storing customer reviews.',
-           'has_archive' => false,
-           'public' => true,
-           'publicly_queryable'  => false,
-           'show_in_menu' => true,
-           'menu_position' => 7,
-           'menu_icon' => 'dashicons-thumbs-up',
-           'hierarchical' => false,
-		   'taxonomies' => [''], // Had PHP error without this (Invalid argument supplied for foreach()).
-           'show_in_rest' => false,
-           'delete_with_user' => false
-       )
-   );
+	register_post_type( 'review',
+		array(
+			// Define semantic menu labels for the new post type
+			'labels' => array(
+				'name' => 'Salon Reviews',
+				'singular_name' => 'Review',
+				'add_new' => 'New Review',
+				'add_new_item' => 'Add New Review',
+				'edit_item' => 'Edit Review',
+				'new_item' => 'New Review',
+				'view_item' => 'View Reviews',
+				'search_items' => 'Search Reviews',
+				'not_found' => 'No Reviews Found',
+				'not_found_in_trash' => 'No Reviews found in Trash',
+			),
+			// WP features the post type supports
+			'supports' => array(
+				'title',
+				'editor',
+			),
+			'rewrite' => array(
+				'slug' => 'reviews', // URI to rewrite from the 'ugly' post type
+				'with_front' => 'false' // Don't prepend URI with default 'posts'
+			),
+			'description' => 'This is a custom post type for storing customer reviews.',
+			'has_archive' => false,
+			'public' => true,
+			'publicly_queryable'  => false,
+			'show_in_menu' => true,
+			'menu_position' => 7,
+			'menu_icon' => 'dashicons-thumbs-up',
+			'hierarchical' => false,
+			'taxonomies' => [''], // Fixes PHP error "Invalid argument supplied for foreach()".
+			'show_in_rest' => false,
+			'delete_with_user' => false
+		)
+	);
 }
 add_action( 'init', 'bbs_register_post_type_review' );
 
@@ -344,19 +344,19 @@ endif;
 
 
 // Add ACF meta field columns to service post list in admin area
- function add_acf_columns ( $columns ) {
-   return array_merge ( $columns, array (
-     'bbs_position' => __ ( 'Position' )
-   ) );
- }
- add_filter ( 'manage_service_posts_columns', 'add_acf_columns' );
+function add_acf_columns ( $columns ) {
+	return array_merge ( $columns, array (
+		'bbs_position' => __ ( 'Position' )
+	) );
+}
+add_filter ( 'manage_service_posts_columns', 'add_acf_columns' );
 
 // Populate ACF meta field columns with meta data
 function service_custom_column ( $column, $post_id ) {
-  switch ( $column ) {
-    case 'bbs_position':
-      echo get_post_meta ( $post_id, 'bbs_position', true );
-      break;
-  }
+	switch ( $column ) {
+		case 'bbs_position':
+			echo get_post_meta ( $post_id, 'bbs_position', true );
+			break;
+	}
 }
 add_action ( 'manage_service_posts_custom_column', 'service_custom_column', 10, 2 );
