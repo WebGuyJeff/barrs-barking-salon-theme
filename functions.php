@@ -76,10 +76,6 @@ include get_theme_file_path() . '/admin/bbs-admin-settings.php';
  // Barking Salon custom post type - services
 include get_theme_file_path() . '/admin/bbs-custom-post-types.php';
 
-// Turn off theme and plugin auto-updates
-add_filter( 'auto_update_plugin', '__return_false' );
-add_filter( 'auto_update_theme', '__return_false' );
-
 /**
 * Enqueue scripts and styles.
 */
