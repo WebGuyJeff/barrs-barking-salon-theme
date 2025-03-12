@@ -82,8 +82,8 @@ if ( $bbs_settings ) {
 			<span class="footer_copyright">&copy; <?php echo date( 'Y' ); ?> <?php echo file_get_contents( get_template_directory() . '/images/rosie.svg' ); ?> Toolbelt</span>
 		</div>
 
-		<div style="display:flex;justify-content:center;width:100%;font-family:sans-serif;font-size:1rem;font-weight: 400;">
-			<p id="footer_backlink">Website by <a style="color:#f8f801;text-decoration:none;font-weight:600;letter-spacing:-0.03rem;" target="_blank" href="https://webguyjeff.com/">Web Guy Jeff</a></p>
+		<div id="footer_backlink" aria-label="Visit WebGuyJeff.com for Websites, hosting and domains" title="Visit WebGuyJeff.com for Websites, hosting and domains" style="display: flex; justify-content: center; width: 100%; font-family: sans-serif; font-size: 1rem; font-weight: 400;">
+			<p>Website by <a style="color: #f8f801; text-decoration: none; font-weight: 600; letter-spacing: -0.03rem;" href="https://webguyjeff.com/" target="_blank" rel="noopener">Web Guy Jeff</a></p>
 		</div>
 
 	</footer>
