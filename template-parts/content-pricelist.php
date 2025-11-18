@@ -54,7 +54,7 @@
                             if ( get_field('show_pricelist_price') && !empty( $price ) ) {
                                 echo '<td>' . '£' . get_field( 'bbs_price' ) . '</td>';
                             } else {
-                                echo '<td><a class="readMore" href="/services/#breed-pricelist">See Breed Pricelist</a></td>';
+                                echo '<td><a class="readMore" href="/contact#contact-form">Enquire for Price</a></td>';
                             }
 
                         echo '</tr>';

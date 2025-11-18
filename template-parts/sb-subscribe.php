@@ -2,7 +2,7 @@
 // The Sidebar Subscribe Widget Template Part for Barr's Barking salon
 // 2023 © Barr's Barking Salon
 // Author: Jefferson Real
-// URL: https://jeffersonreal.uk
+// URL: https://webguyjeff.com
 
 $bbs_settings        = get_option( 'bbs_theme_array' );                                                                    // Serialized array of all Options
 $bbs_title_subscribe = isset( $bbs_settings['bbs_title_subscribe'] ) ? $bbs_settings['bbs_title_subscribe'] : 'Subscribe'; // Subscribe Form Title

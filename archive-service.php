@@ -22,17 +22,19 @@ get_header();
                     <?php echo get_post_field( 'post_content', $service_post_id ); ?>
                 </header>
 
+				<!-- Service price table -->
                 <section id="pricelist" class="pricelist">
                     <h2>Dog Grooming Service Pricelist</h2>
-                    <!-- Fetch service price table -->
                     <?php get_template_part( 'template-parts/content', 'pricelist' ); ?>
                 </section>
 
+				<!-- Breed price table -->
+				<!--
                 <section id="breed-pricelist" class="pricelist">
-                    <h2 class=""><?php echo get_post_field( 'post_title', $breed_table_post_id, 'raw' ); ?></h2>
-                    <!-- Fetch breed price table -->
-                    <?php echo get_post_field( 'post_content', $breed_table_post_id ); ?>
+                    <h2 class=""><?php //echo get_post_field( 'post_title', $breed_table_post_id, 'raw' ); ?></h2>
+                    <?php //echo get_post_field( 'post_content', $breed_table_post_id ); ?>
                 </section>
+				-->
 
             </div>
 

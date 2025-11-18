@@ -2,7 +2,7 @@
 // The Homepage Template for Barr's Barking salon
 // 2023 © Barr's Barking Salon
 // Author: Jefferson Real
-// URL: https://jeffersonreal.uk
+// URL: https://webguyjeff.com
 
 get_header('hero');
 ?>

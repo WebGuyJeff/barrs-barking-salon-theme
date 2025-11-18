@@ -2,7 +2,7 @@
 // The Other Services Template Part for Barr's Barking salon
 // 2023 © Barr's Barking Salon
 // Author: Jefferson Real
-// URL: https://jeffersonreal.uk
+// URL: https://webguyjeff.com
 
 $bbs_settings = get_option( 'bbs_theme_array' );                                                                                        // Serialized array of all Options
 if ( $bbs_settings ) {
@@ -74,7 +74,7 @@ if ( $bbs_settings ) {
 					if ( get_field( 'show_homepage_price' ) && ! empty( $price ) ) {
 						echo '<span class="service_price">' . '£' . get_field( 'bbs_price' ) . '</span>';
 					} else {
-						echo '<span class="service_price-empty"><a class="readMore" href="/services/#breed-pricelist">See Breed Pricelist</a></span>';
+						echo '<span class="service_price-empty"><a class="readMore" href="/contact#contact-form">Enquire for Price</a></span>';
 					}
 					?>
 

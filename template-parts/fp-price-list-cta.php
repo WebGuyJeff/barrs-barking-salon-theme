@@ -2,7 +2,7 @@
 // The Price List CTA Template Part for Barr's Barking salon
 // 2023 © Barr's Barking Salon
 // Author: Jefferson Real
-// URL: https://jeffersonreal.uk
+// URL: https://webguyjeff.com
 
 $bbs_settings = get_option( 'bbs_theme_array' ); // Serialized array of all Options
 if ( $bbs_settings ) {

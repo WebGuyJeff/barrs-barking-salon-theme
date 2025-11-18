@@ -2,7 +2,7 @@
 // The Footer Template for Barr's Barking salon
 // 2023 © Barr's Barking Salon
 // Author: Jefferson Real
-// URL: https://jeffersonreal.uk
+// URL: https://webguyjeff.com
 
 // Load theme settings variables for this document
 $bbs_settings = get_option( 'bbs_theme_array' );                                                                               // Serialized array of all Options
@@ -79,7 +79,7 @@ if ( $bbs_settings ) {
 				</div>
 			<?php endif ?>
 
-			<span class="footer_copyright">&copy; <?php echo date( 'Y' ); ?> <?php echo file_get_contents( get_template_directory() . '/images/rosie.svg' ); ?> Toolbelt</span>
+			<span class="footer_copyright">&copy; <?php echo date( 'Y' ); ?> <?php echo file_get_contents( get_template_directory() . '/images/bbs_rosie.svg' ); ?> Toolbelt</span>
 		</div>
 
 		<div id="footer_backlink" aria-label="Visit WebGuyJeff.com for Websites, hosting and domains" title="Visit WebGuyJeff.com for Websites, hosting and domains" style="display: flex; justify-content: center; width: 100%; font-family: sans-serif; font-size: 1rem; font-weight: 400;">

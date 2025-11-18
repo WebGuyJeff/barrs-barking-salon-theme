@@ -3,7 +3,7 @@
 Barrs Barking Salon Custom Post Types and Fields
 Version: 1.0
 Author: Jefferson Real
-Author URI: https://jeffersonreal.uk
+Author URI: https://webguyjeff.com
 License: GPLv2
 */
 

@@ -2,7 +2,7 @@
 // The Contact Form Widget Template Part for Barr's Barking salon
 // 2023 © Barr's Barking Salon
 // Author: Jefferson Real
-// URL: https://jeffersonreal.uk
+// URL: https://webguyjeff.com
 ?>
 
     <h3 class="sidebar_title">Message and Book</h3>

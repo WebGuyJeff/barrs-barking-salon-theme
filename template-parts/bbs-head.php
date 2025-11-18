@@ -53,6 +53,8 @@ if ( is_archive() ) {
         $meta_desc = $post_title . $sep . $desc . $site_title;
     }
     $post = $temp_post; // Restore the value of $post to the original
+} else {
+	$meta_desc = $desc;
 }
 
 // og:image
