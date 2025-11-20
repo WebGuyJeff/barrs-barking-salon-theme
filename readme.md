@@ -9,7 +9,8 @@ A theme built for Barr's Barking Salon, a dog groomer.
  - Changed default null service price text to "Enquire for Price".
  - Fixed missing default meta description for empty homepage.
  - Various image path fixes.
- - Added HTML anchors so menu links land on page content beyond large hero. 
+ - Added HTML anchors so menu links land on page content beyond large hero.
+ - Removed price tables from the services page template.
 
 **Version: 1.0.1**
 First live version

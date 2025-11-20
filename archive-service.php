@@ -23,10 +23,12 @@ get_header();
                 </header>
 
 				<!-- Service price table -->
+				<!--
                 <section id="pricelist" class="pricelist">
                     <h2>Dog Grooming Service Pricelist</h2>
-                    <?php get_template_part( 'template-parts/content', 'pricelist' ); ?>
+                    <?php //get_template_part( 'template-parts/content', 'pricelist' ); ?>
                 </section>
+				-->
 
 				<!-- Breed price table -->
 				<!--
